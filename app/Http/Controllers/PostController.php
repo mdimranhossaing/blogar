@@ -43,7 +43,7 @@ class PostController extends Controller
         return view(
             'pages.post.posts',
             [
-                'posts' => $post_cache->orderBy('id', 'DESC')->paginate(3)
+                'posts' => $post_cache->paginate(5)
                 // 'posts' => $post->paginate(2)
             ]
         );

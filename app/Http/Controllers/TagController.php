@@ -36,7 +36,13 @@ class TagController extends Controller
      */
     public function show(Tag $tag)
     {
-        //
+        return view(
+            'pages.post.taxonomy',
+            [
+                'posts' => $tag->post,
+                'tag'   => $tag
+            ]
+        );
     }
 
     /**

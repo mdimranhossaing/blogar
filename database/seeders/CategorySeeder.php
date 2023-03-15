@@ -15,7 +15,7 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 0; $i < 5; $i++):
+        for ($i = 0; $i < 30; $i++):
 
             $faker = Factory::create();
 
@@ -28,7 +28,7 @@ class CategorySeeder extends Seeder
             $categories->created_at = Carbon::now();
             $categories->updated_at = Carbon::now();
             $categories->save();
-            
+
         endfor;
     }
 }

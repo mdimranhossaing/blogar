@@ -18,7 +18,7 @@
                             <div class="post-content">
                                 <div class="post-cat">
                                     <div class="post-cat-list">
-                                        <a class="hover-flip-item-wrapper" href="#">
+                                        <a class="hover-flip-item-wrapper" href="{{ route('archive-post', $post->category->slug ) }}">
                                             <span class="hover-flip-item">
                                                 <span data-text="{{$post->category->name}}">{{$post->category->name}}</span>
                                             </span>
@@ -34,7 +34,7 @@
                                         </div>
                                         <div class="content">
                                             <h6 class="post-author-name">
-                                                <a class="hover-flip-item-wrapper" href="#">
+                                                <a class="hover-flip-item-wrapper" href="{{route('user-post', $post->user->username)}}">
                                                     <span class="hover-flip-item">
                                                         <span data-text="{{$post->user->name}}">{{$post->user->name}}</span>
                                                     </span>
@@ -73,7 +73,7 @@
                             <p>{{ $post->content }}</p>
 
                             <div class="tagcloud">
-                                <a href="{{$post->tag->slug}}">{{$post->tag->name}}</a>
+                                <a href="{{route('tag-post',$post->tag->slug)}}">{{$post->tag->name}}</a>
                             </div>
 
                             <div class="social-share-block">
@@ -92,14 +92,14 @@
                             <div class="about-author">
                                 <div class="media">
                                     <div class="thumbnail">
-                                        <a href="#{{$post->user->username}}">
+                                        <a href="{{route('user-post', $post->user->username)}}">
                                             <img src="{{$post->user->profile_picture}}" alt="Author Images">
                                         </a>
                                     </div>
                                     <div class="media-body">
                                         <div class="author-info">
                                             <h5 class="title">
-                                                <a class="hover-flip-item-wrapper" href="{{$post->user->username}}">
+                                                <a class="hover-flip-item-wrapper" href="{{route('user-post', $post->user->username)}}">
                                                     <span class="hover-flip-item">
                                                         <span data-text="{{$post->user->name}}">{{$post->user->name}}</span>
                                                     </span>
@@ -108,10 +108,7 @@
                                             <span class="b3 subtitle">{{$post->user->email}}</span>
                                         </div>
                                         <div class="content">
-                                            <p class="b1 description">At 29 years old, my favorite compliment is being
-                                                told that I look like my mom. Seeing myself in her image, like this
-                                                daughter up top, makes me so proud of how far I’ve come, and so thankful
-                                                for where I come from.</p>
+                                            <p class="b1 description">{{$post->user->description}}</p>
                                             <ul class="social-share-transparent size-md">
                                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>

@@ -36,7 +36,13 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        return view(
+            'pages.post.archive',
+            [
+                'category' => $category,
+                'posts' => $category->post
+            ]
+        );
     }
 
     /**

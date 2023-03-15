@@ -8,7 +8,7 @@
                 <li class="cat-item">
                     <a href="#" class="inner">
                         <div class="thumbnail">
-                            <img src="assets/images/post-images/category-image-01.jpg" alt="">
+                            <img src="/assets/images/post-images/category-image-01.jpg" alt="">
                         </div>
                         <div class="content">
                             <h5 class="title">Tech</h5>
@@ -18,7 +18,7 @@
                 <li class="cat-item">
                     <a href="#" class="inner">
                         <div class="thumbnail">
-                            <img src="assets/images/post-images/category-image-02.jpg" alt="">
+                            <img src="/assets/images/post-images/category-image-02.jpg" alt="">
                         </div>
                         <div class="content">
                             <h5 class="title">Style</h5>
@@ -28,7 +28,7 @@
                 <li class="cat-item">
                     <a href="#" class="inner">
                         <div class="thumbnail">
-                            <img src="assets/images/post-images/category-image-03.jpg" alt="">
+                            <img src="/assets/images/post-images/category-image-03.jpg" alt="">
                         </div>
                         <div class="content">
                             <h5 class="title">Travel</h5>
@@ -38,7 +38,7 @@
                 <li class="cat-item">
                     <a href="#" class="inner">
                         <div class="thumbnail">
-                            <img src="assets/images/post-images/category-image-04.jpg" alt="">
+                            <img src="/assets/images/post-images/category-image-04.jpg" alt="">
                         </div>
                         <div class="content">
                             <h5 class="title">Food</h5>
@@ -71,7 +71,7 @@
                 <div class="content-block post-medium mb--20">
                     <div class="post-thumbnail">
                         <a href="post-details.html">
-                            <img src="assets/images/small-images/blog-sm-01.jpg" alt="Post Images">
+                            <img src="/assets/images/small-images/blog-sm-01.jpg" alt="Post Images">
                         </a>
                     </div>
                     <div class="post-content">
@@ -92,7 +92,7 @@
                 <div class="content-block post-medium mb--20">
                     <div class="post-thumbnail">
                         <a href="post-details.html">
-                            <img src="assets/images/small-images/blog-sm-02.jpg" alt="Post Images">
+                            <img src="/assets/images/small-images/blog-sm-02.jpg" alt="Post Images">
                         </a>
                     </div>
                     <div class="post-content">
@@ -113,7 +113,7 @@
                 <div class="content-block post-medium mb--20">
                     <div class="post-thumbnail">
                         <a href="post-details.html">
-                            <img src="assets/images/small-images/blog-sm-03.jpg" alt="Post Images">
+                            <img src="/assets/images/small-images/blog-sm-03.jpg" alt="Post Images">
                         </a>
                     </div>
                     <div class="post-content">
@@ -158,32 +158,32 @@
             <ul class="instagram-post-list-wrapper">
                 <li class="instagram-post-list">
                     <a href="#">
-                        <img src="assets/images/small-images/instagram-01.jpg" alt="Instagram Images">
+                        <img src="/assets/images/small-images/instagram-01.jpg" alt="Instagram Images">
                     </a>
                 </li>
                 <li class="instagram-post-list">
                     <a href="#">
-                        <img src="assets/images/small-images/instagram-02.jpg" alt="Instagram Images">
+                        <img src="/assets/images/small-images/instagram-02.jpg" alt="Instagram Images">
                     </a>
                 </li>
                 <li class="instagram-post-list">
                     <a href="#">
-                        <img src="assets/images/small-images/instagram-03.jpg" alt="Instagram Images">
+                        <img src="/assets/images/small-images/instagram-03.jpg" alt="Instagram Images">
                     </a>
                 </li>
                 <li class="instagram-post-list">
                     <a href="#">
-                        <img src="assets/images/small-images/instagram-04.jpg" alt="Instagram Images">
+                        <img src="/assets/images/small-images/instagram-04.jpg" alt="Instagram Images">
                     </a>
                 </li>
                 <li class="instagram-post-list">
                     <a href="#">
-                        <img src="assets/images/small-images/instagram-05.jpg" alt="Instagram Images">
+                        <img src="/assets/images/small-images/instagram-05.jpg" alt="Instagram Images">
                     </a>
                 </li>
                 <li class="instagram-post-list">
                     <a href="#">
-                        <img src="assets/images/small-images/instagram-06.jpg" alt="Instagram Images">
+                        <img src="/assets/images/small-images/instagram-06.jpg" alt="Instagram Images">
                     </a>
                 </li>
             </ul>

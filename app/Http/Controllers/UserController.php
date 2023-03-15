@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -25,9 +26,15 @@ class UserController extends Controller
     /**
      * Display the resource.
      */
-    public function show()
+    public function show(User $user)
     {
-        //
+        return view(
+            'pages.post.author_post',
+            [
+                'posts' => $user->post,
+                'user'  =>  $user
+            ]
+        );
     }
 
     /**

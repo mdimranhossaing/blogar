@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TagController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,6 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [PostController::class, 'show'])->name('posts');
 Route::get('/single/{post:slug}', [PostController::class, 'single'])->name('single');
+Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('archive-post');
+Route::get('/tag/{tag:slug}', [TagController::class, 'show'])->name('tag-post');
+Route::get('/user/{user:username}', [UserController::class, 'show'])->name('user-post');

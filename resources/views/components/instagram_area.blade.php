@@ -13,37 +13,37 @@
                 <ul class="instagram-post-list">
                     <li class="single-post">
                         <a href="#">
-                            <img src="assets/images/small-images/instagram-md-01.jpg" alt="Instagram Images">
+                            <img src="/assets/images/small-images/instagram-md-01.jpg" alt="Instagram Images">
                             <span class="instagram-button"><i class="fab fa-instagram"></i></span>
                         </a>
                     </li>
                     <li class="single-post">
                         <a href="#">
-                            <img src="assets/images/small-images/instagram-md-02.jpg" alt="Instagram Images">
+                            <img src="/assets/images/small-images/instagram-md-02.jpg" alt="Instagram Images">
                             <span class="instagram-button"><i class="fab fa-instagram"></i></span>
                         </a>
                     </li>
                     <li class="single-post">
                         <a href="#">
-                            <img src="assets/images/small-images/instagram-md-03.jpg" alt="Instagram Images">
+                            <img src="/assets/images/small-images/instagram-md-03.jpg" alt="Instagram Images">
                             <span class="instagram-button"><i class="fab fa-instagram"></i></span>
                         </a>
                     </li>
                     <li class="single-post">
                         <a href="#">
-                            <img src="assets/images/small-images/instagram-md-04.jpg" alt="Instagram Images">
+                            <img src="/assets/images/small-images/instagram-md-04.jpg" alt="Instagram Images">
                             <span class="instagram-button"><i class="fab fa-instagram"></i></span>
                         </a>
                     </li>
                     <li class="single-post">
                         <a href="#">
-                            <img src="assets/images/small-images/instagram-md-05.jpg" alt="Instagram Images">
+                            <img src="/assets/images/small-images/instagram-md-05.jpg" alt="Instagram Images">
                             <span class="instagram-button"><i class="fab fa-instagram"></i></span>
                         </a>
                     </li>
                     <li class="single-post">
                         <a href="#">
-                            <img src="assets/images/small-images/instagram-md-06.jpg" alt="Instagram Images">
+                            <img src="/assets/images/small-images/instagram-md-06.jpg" alt="Instagram Images">
                             <span class="instagram-button"><i class="fab fa-instagram"></i></span>
                         </a>
                     </li>
