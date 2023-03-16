@@ -27,6 +27,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <style>
+        .metabar-block .mainmenu-nav ul.mainmenu>li.menu-item-has-children .axil-submenu {
+            left: -460%;
+        }
+
         .post-meta .post-author-avatar img {
             width: 50px;
             height: 50px;
@@ -825,13 +829,16 @@
 
                     <div class="col-xl-3 col-lg-8 col-md-8 col-sm-9 col-12">
                         <div class="header-search text-end d-flex align-items-center">
-                            <form class="header-search-form d-sm-block d-none">
+
+                            <form class="header-search-form d-sm-block d-none" action="{{ route('search') }}"
+                                method="GET">
                                 <div class="axil-search form-group">
                                     <button type="submit" class="search-button"><i
                                             class="fal fa-search"></i></button>
-                                    <input type="text" class="form-control" placeholder="Search">
+                                    <input type="search" class="form-control" name="search" placeholder="Search">
                                 </div>
                             </form>
+
                             <div class="mobile-search-wrapper d-sm-none d-block">
                                 <button class="search-button-toggle"><i class="fal fa-search"></i></button>
                                 <form class="header-search-form">
@@ -845,9 +852,46 @@
                             <ul class="metabar-block">
                                 <li class="icon"><a href="#"><i class="fas fa-bookmark"></i></a></li>
                                 <li class="icon"><a href="#"><i class="fas fa-bell"></i></a></li>
-                                <li><a href="#"><img src="/assets/images/others/author.png"
-                                            alt="Author Images"></a></li>
+                                <li>
+                                    <nav class="mainmenu-nav">
+                                        <!-- Start Mainmanu Nav -->
+                                        <ul class="mainmenu">
+                                            <li class="menu-item-has-children">
+                                                <a href="#">
+                                                    <img src="/assets/images/others/author.png" alt="Author Images">
+                                                </a>
+                                                <ul class="axil-submenu">
+                                                    <li>
+                                                        <a class="hover-flip-item-wrapper"
+                                                            href="{{ route('register') }}">
+                                                            <span class="hover-flip-item">
+                                                                <span data-text="Register">Register</span>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <!-- End Mainmanu Nav -->
+                                    </nav>
+                                </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             </ul>
+
+
                             <!-- Start Hamburger Menu  -->
                             <div class="hamburger-menu d-block d-xl-none">
                                 <div class="hamburger-inner">

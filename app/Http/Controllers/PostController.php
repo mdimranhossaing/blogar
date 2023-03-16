@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
@@ -35,11 +36,14 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show(Request $request, Post $post)
     {
-        $post_cache = Cache::remember('posts', now()->addMinute(), function () use ($post) {
+        $search = $request->search;
+
+        $post_cache = Cache::remember('posts', now()->addMinute(), function () use ($post, $search) {
             return $post;
         });
+
         return view(
             'pages.post.posts',
             [
@@ -49,11 +53,35 @@ class PostController extends Controller
         );
     }
 
-    public function single(Post $post){
+    public function search(Request $request, Post $post, Tag $tag) {
+
+        $search = $request->search;
+
+        $post_cache = Cache::remember('posts', now()->addMinute(), function () use ($post) {
+            return $post;
+        });
+
+        return view(
+            'pages.post.search',
+            [
+                'posts' => $post_cache
+                    ->where('title', 'like', '%' . $search .'%')
+                    ->orWhere('excerpt', 'like', '%' . $search .'%')
+                    ->orWhere('content', 'like', '%' . $search .'%')
+                    ->get()
+            ]
+        );
+    }
+
+    public function single(Post $post)
+    {
+
+        $post->increment('views', 1);
+
         return view(
             'pages.post.single ',
             [
-                'post'  =>  $post
+                'post' => $post
             ]
         );
     }

@@ -18,7 +18,12 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/', [PostController::class, 'show'])->name('posts');
+Route::get('/search', [PostController::class, 'search'])->name('search');
 Route::get('/single/{post:slug}', [PostController::class, 'single'])->name('single');
 Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('archive-post');
 Route::get('/tag/{tag:slug}', [TagController::class, 'show'])->name('tag-post');
 Route::get('/user/{user:username}', [UserController::class, 'show'])->name('user-post');
+
+// Register
+Route::get('/register', [UserController::class, 'create'])->name('register');
+Route::post('/register/store', [UserController::class, 'store']);

@@ -4,23 +4,42 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Hamcrest\BaseDescription;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
     /**
      * Show the form for creating the resource.
      */
-    public function create(): never
+    public function create()
     {
-        abort(404);
+        return view('pages.login.register');
     }
 
     /**
      * Store the newly created resource in storage.
      */
-    public function store(Request $request): never
+    public function store(Request $request, User $user)
     {
-        abort(404);
+        $rules = [
+            'name'          =>  'required',
+            'username'      =>  'required',
+            'email'         =>  'required',
+            'password'      =>  'required',
+            'photo'         =>  'required',
+            'description'   =>  'required',
+        ];
+        $this->validate($request,$rules);
+
+        $user->name         =  $request->name;
+        $user->username     =  $request->username;
+        $user->email        =  $request->email;
+        $user->password     =  Hash::make($request->password);
+        $user->profile_picture        =  $request->photo;
+        $user->description  =  $request->description;
+        $user->save();
+        return redirect('/register')->with('msg', $request->name .' User created successfully');
     }
 
     /**

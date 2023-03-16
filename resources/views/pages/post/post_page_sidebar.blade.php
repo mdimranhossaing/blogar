@@ -52,10 +52,10 @@
         <!-- Start Single Widget  -->
         <div class="axil-single-widget widget widget_search mb--30">
             <h5 class="widget-title">Search</h5>
-            <form action="#">
+            <form action="{{route('search')}}" method="GET">
                 <div class="axil-search form-group">
                     <button type="submit" class="search-button"><i class="fal fa-search"></i></button>
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" name="search" class="form-control" placeholder="Search">
                 </div>
             </form>
         </div>
