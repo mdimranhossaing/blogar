@@ -25,5 +25,15 @@ Route::get('/tag/{tag:slug}', [TagController::class, 'show'])->name('tag-post');
 Route::get('/user/{user:username}', [UserController::class, 'show'])->name('user-post');
 
 // Register
-Route::get('/register', [UserController::class, 'create'])->name('register');
+Route::get('/register', [UserController::class, 'create'])->name('register')->middleware('guest');
 Route::post('/register/store', [UserController::class, 'store']);
+
+// Login
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
+Route::post('/login', [UserController::class, 'login_process'])->name('login.process');
+
+// Dashboard
+Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard')->middleware('auth');
+
+// Logout
+Route::get('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');

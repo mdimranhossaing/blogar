@@ -18,8 +18,8 @@
                             {{-- Field --}}
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="form-group">
-                                    <label for="name">Your name</label>
-                                    <input type="text" name="name" id="name"  placeholder="Enter your name">
+                                    <label for="name">Your name <small class="text-danger">*</small></label>
+                                    <input type="text" name="name" id="name"  placeholder="Enter your name" value="{{old('name')}}">
                                     @error('name')
                                     <div class="form-text text-danger">{{$message}}</div>
                                     @enderror
@@ -29,8 +29,8 @@
                             {{-- Field --}}
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="form-group">
-                                    <label for="username">Your username</label>
-                                    <input type="text" name="username" id="username"  placeholder="Enter your username">
+                                    <label for="username">Your username <small class="text-danger">*</small></label>
+                                    <input type="text" name="username" id="username"  placeholder="Enter your username" value="{{old('username')}}">
                                     @error('username')
                                     <div class="form-text text-danger">{{$message}}</div>
                                     @enderror
@@ -40,8 +40,8 @@
                             {{-- Field --}}
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="form-group">
-                                    <label for="email">Your email</label>
-                                    <input type="email" name="email" id="email"  placeholder="Enter your email">
+                                    <label for="email">Your email <small class="text-danger">*</small></label>
+                                    <input type="text" name="email" id="email"  placeholder="Enter your email" value="{{old('email')}}">
                                     @error('email')
                                     <div class="form-text text-danger">{{$message}}</div>
                                     @enderror
@@ -51,8 +51,8 @@
                             {{-- Field --}}
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="form-group">
-                                    <label for="password">Your password</label>
-                                    <input type="password" name="password" id="password"  placeholder="Enter your password">
+                                    <label for="password">Your password <small class="text-danger">*</small></label>
+                                    <input type="password" name="password" id="password"  placeholder="Enter your password" value="{{old('password')}}">
                                     @error('password')
                                     <div class="form-text text-danger">{{$message}}</div>
                                     @enderror
@@ -62,9 +62,9 @@
                             {{-- Field --}}
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label for="photo">Your photo</label>
-                                    <input type="url" name="photo" id="photo"  placeholder="Enter your photo">
-                                    @error('photo')
+                                    <label for="photo">Your photo <small class="text-danger">*</small></label>
+                                    <input type="text" name="profile_picture" id="photo"  placeholder="Enter your photo" value="{{old('photo')}}">
+                                    @error('profile_picture')
                                     <div class="form-text text-danger">{{$message}}</div>
                                     @enderror
                                 </div>
@@ -73,8 +73,8 @@
                             {{-- Field --}}
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label for="description">Your description</label>
-                                    <textarea name="description" id="description" cols="30" rows="5" placeholder="Write something"></textarea>
+                                    <label for="description">Your description <small class="text-danger">*</small></label>
+                                    <textarea name="description" id="description" cols="30" rows="5" placeholder="Write something">{{old('description')}}</textarea>
                                     @error('description')
                                     <div class="form-text text-danger">{{$message}}</div>
                                     @enderror

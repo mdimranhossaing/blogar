@@ -68,7 +68,7 @@ class PostController extends Controller
                     ->where('title', 'like', '%' . $search .'%')
                     ->orWhere('excerpt', 'like', '%' . $search .'%')
                     ->orWhere('content', 'like', '%' . $search .'%')
-                    ->get()
+                    ->paginate(5)
             ]
         );
     }

@@ -39,7 +39,7 @@ class TagController extends Controller
         return view(
             'pages.post.taxonomy',
             [
-                'posts' => $tag->post,
+                'posts' => $tag->post()->paginate(5),
                 'tag'   => $tag
             ]
         );

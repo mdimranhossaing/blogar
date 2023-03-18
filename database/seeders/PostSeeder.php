@@ -15,7 +15,7 @@ class PostSeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 0; $i < 30; $i++):
+        for ($i = 0; $i < 10; $i++):
 
             $faker      = Factory::create();
 
@@ -36,9 +36,9 @@ class PostSeeder extends Seeder
             $posts->thumbnail   = $faker->imageUrl(1414, 707);
             $posts->views       = $faker->numberBetween(300, 10000);
             $posts->likes       = $faker->numberBetween(300, 10000);
-            $posts->category_id = $faker->numberBetween(1, 30);
-            $posts->tag_id      = $faker->numberBetween(1, 30);
-            $posts->user_id     = $faker->numberBetween(1, 30);
+            $posts->category_id = $faker->numberBetween(1, 5);
+            $posts->tag_id      = $faker->numberBetween(1, 5);
+            $posts->user_id     = $faker->numberBetween(1, 5);
             $posts->created_at  = Carbon::now();
             $posts->updated_at  = Carbon::now();
             $posts->save();

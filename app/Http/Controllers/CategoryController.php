@@ -40,7 +40,7 @@ class CategoryController extends Controller
             'pages.post.archive',
             [
                 'category' => $category,
-                'posts' => $category->post
+                'posts' => $category->post()->paginate(5)
             ]
         );
     }

@@ -66,6 +66,10 @@
                         </div>
                         <!-- End Post List  -->
                         @endforeach
+
+                        {{-- Pagination --}}
+                        <p class="mt-5">{{ $posts->links('vendor.pagination.bootstrap-5') }}</p>
+                        
                     @else
                         <h3 class="title text-center">No post found!</h3>
                     @endif

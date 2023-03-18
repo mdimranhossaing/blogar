@@ -18,7 +18,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-xl-8">
-
+                    @if (count($posts) > 0)
                     @foreach ($posts as $post)
                     <!-- Start Post List  -->
                     <div class="content-block post-list-view mt--30">
@@ -65,6 +65,12 @@
                     </div>
                     <!-- End Post List  -->
                     @endforeach
+                    {{-- Pagination --}}
+                    <p class="mt-5">{{ $posts->links('vendor.pagination.bootstrap-5') }}</p>
+
+                    @else
+                    <h3 class="title text-center">No post found!</h3>
+                    @endif
 
                 </div>
 
